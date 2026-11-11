@@ -1,12 +1,7 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
+  font-family: sans-serif;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  color: #222;
+  background: #f3f4f6;
 }
 
 header {
@@ -18,38 +13,46 @@ header {
   align-items: center;
 }
 
-header button {
-  margin-left: 12px;
-  background: #ef4444;
-  color: #fff;
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header-right { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
+#auth-guest, #auth-user { display: flex; gap: 8px; align-items: center; }
+[hidden] { display: none !important; }
+
+header input, header button {
+  padding: 6px 10px;
   border: 0;
   border-radius: 6px;
-  padding: 8px 12px;
+}
+
+header button {
+  background: #16a34a;
+  color: #fff;
   cursor: pointer;
 }
 
-main {
-  max-width: 1000px;
-  margin: 24px auto;
-  padding: 0 16px;
+.cart {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 8px;
 }
 
 .catalog {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 16px;
+  padding: 24px;
 }
 
 .card {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 16px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
-}
-
-.card h3 {
-  margin: 0 0 8px;
-  font-size: 18px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .card .category {
@@ -57,10 +60,20 @@ main {
   font-size: 14px;
 }
 
+.card h3 {
+  margin: 8px 0;
+}
+
 .card .price {
   font-weight: bold;
   font-size: 20px;
-  margin: 12px 0;
+  margin-bottom: 8px;
+}
+
+.card .stock {
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 10px;
 }
 
 .card button {
@@ -70,8 +83,10 @@ main {
   border-radius: 6px;
   padding: 8px 14px;
   cursor: pointer;
+  width: 100%;
 }
 
-.card button:hover {
-  background: #1d4ed8;
+.card button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
 }

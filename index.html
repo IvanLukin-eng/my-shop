@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style.css">
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -7,17 +8,28 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>Мой магазин</h1>
-  <div class="cart">
-    <input id="customer-name" placeholder="Ваше имя">
-    <span>Корзина: <span id="cart-count">0</span> шт. на <span id="cart-sum">0</span> ₽</span>
-    <button id="checkout">Оформить заказ</button>
-  </div>
-</header>
-<main>
-  <div id="catalog" class="catalog"></div>
-</main>
-<script src="app.js"></script>
+  <header>
+    <h1>Мой магазин</h1>
+    <div class="header-right">
+      <div id="auth-guest">
+        <input id="email" type="email" placeholder="Email">
+        <input id="password" type="password" placeholder="Пароль">
+        <button id="login-btn">Войти</button>
+        <button id="register-btn">Регистрация</button>
+      </div>
+      <div id="auth-user" hidden>
+        <span id="user-email"></span>
+        <button id="logout-btn">Выйти</button>
+      </div>
+      <div class="cart">
+        <span>Корзина: <span id="cart-count">0</span> шт. на <span id="cart-sum">0</span> ₽</span>
+        <button id="checkout">Оформить заказ</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="catalog" class="catalog"></div>
+  </main>
+  <script src="app.js"></script>
 </body>
 </html>
