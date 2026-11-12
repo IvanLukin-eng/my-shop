@@ -90,3 +90,19 @@ header button {
   background: #94a3b8;
   cursor: not-allowed;
 }
+.filters { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.filters input, .filters select { padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 6px; }
+.filters input { flex: 1; min-width: 200px; }
+
+.pager { display: flex; justify-content: center; align-items: center; gap: 16px; margin: 24px 0; }
+
+.pager button {
+  background: #1e293b;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.pager button:disabled { background: #94a3b8; cursor: not-allowed; }
